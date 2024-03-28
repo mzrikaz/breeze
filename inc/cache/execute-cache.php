@@ -120,7 +120,12 @@ if ( substr_count( $breeze_current_url_path, '?' ) > 0 ) {
 
 // Don't cache
 if ( ! empty( $_COOKIE ) ) {
-	$wp_cookies = array( 'wordpressuser_', 'wordpresspass_', 'wordpress_sec_', 'wordpress_logged_in_' );
+	$wp_cookies = array( 
+		'wordpressuser_', 'wordpresspass_', 'wordpress_sec_', 'wordpress_logged_in_', 'cartflows_session_', 'wcf_active_checkout',
+		'wcf-visited-flow-', 'wcf-step-visited-', 'cartflows-ab-test-', 'woocommerce_cart_hash', 'woocommerce_items_in_cart', 'wp_woocommerce_session_',
+		'woocommerce_recently_viewed', 'store_notice[notice id]', 'woocommerce_snooze_suggestions__[suggestion]', 'woocommerce_dismissed_suggestions__[context]',
+		'tk_ai'
+	);
 
 	foreach ( $_COOKIE as $key => $value ) {
 		// Logged in!
